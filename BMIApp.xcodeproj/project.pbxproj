@@ -14,8 +14,8 @@
 		0EA0316C26809B0700BB67CA /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0316B26809B0700BB67CA /* Gender.swift */; };
 		0EA0316E26809CA800BB67CA /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0316D26809CA800BB67CA /* FormView.swift */; };
 		0EA0317126809E1900BB67CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0317026809E1900BB67CA /* Constants.swift */; };
-		0EA031732680A58200BB67CA /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA031722680A58200BB67CA /* Field.swift */; };
 		0EA031762680B04B00BB67CA /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA031752680B04B00BB67CA /* ResultView.swift */; };
+		0EA0317C2681DDA900BB67CA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0317B2681DDA900BB67CA /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		0EA0316B26809B0700BB67CA /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		0EA0316D26809CA800BB67CA /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		0EA0317026809E1900BB67CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0EA031722680A58200BB67CA /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		0EA031752680B04B00BB67CA /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		0EA031782680CCD100BB67CA /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		0EA031792680CCD100BB67CA /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		0EA0317B2681DDA900BB67CA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +68,7 @@
 				0EA031742680B03A00BB67CA /* View */,
 				0EA0316F26809DF300BB67CA /* Utils */,
 				0EA0316A26809AFC00BB67CA /* Model */,
+				0EA0317A2681DD9900BB67CA /* ViewModel */,
 				0E90E6AA267CE36200E91084 /* BMIAppApp.swift */,
 				0E90E6AE267CE36400E91084 /* Assets.xcassets */,
 				0E90E6B3267CE36400E91084 /* Info.plist */,
@@ -88,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				0EA0316B26809B0700BB67CA /* Gender.swift */,
-				0EA031722680A58200BB67CA /* Field.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +118,14 @@
 				0EA031782680CCD100BB67CA /* Gilroy-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0EA0317A2681DD9900BB67CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0EA0317B2681DDA900BB67CA /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,10 +199,10 @@
 			files = (
 				0EA0317126809E1900BB67CA /* Constants.swift in Sources */,
 				0EA0316E26809CA800BB67CA /* FormView.swift in Sources */,
-				0EA031732680A58200BB67CA /* Field.swift in Sources */,
 				0EA0316C26809B0700BB67CA /* Gender.swift in Sources */,
 				0E90E6AD267CE36200E91084 /* ContentView.swift in Sources */,
 				0EA031762680B04B00BB67CA /* ResultView.swift in Sources */,
+				0EA0317C2681DDA900BB67CA /* ViewModel.swift in Sources */,
 				0E90E6AB267CE36200E91084 /* BMIAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

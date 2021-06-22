@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ResultView: View {
     
+    private var resultData: BMIResultData? = nil
+    
     @Environment(\.presentationMode) var presentation
     
-    init() {
+    init(result: BMIResultData) {
+        self.resultData = result
         UITabBar.appearance().isHidden = true
         UINavigationBar.appearance().isHidden = true
     }
@@ -21,7 +24,7 @@ struct ResultView: View {
             ZStack {
                 Color.white
                 
-                InfoView()
+                InfoView(result: resultData ?? BMIResultData(bmi: "", result: BMIResult("")))
                 
             }
             .frame(width: 320, height: 450)
@@ -50,28 +53,25 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView()
+        ContentView()
     }
 }
 
 struct InfoView: View {
+    
+    @State var result: BMIResultData
+    
     var body: some View {
         VStack(spacing: 10) {
             Text("Your BMI is")
                 .foregroundColor(.black)
                 .font(Font.custom("Gilroy-Bold", size: 40))
             
-            Text("21.1")
+            Text(result.bmi)
                 .foregroundColor(Constants.green)
                 .font(Font.custom("Gilroy-Bold", size: 55))
             
-            Text(
-                "This value is in the normal range \nof 20.25 for your age group.\n"
-                    
-                    +
-                    
-                    "Keep up the good work!"
-            )
+            Text(result.result.description)
             .font(Font.custom("Gilroy-Regular", size: 15))
             .multilineTextAlignment(.center)
             
@@ -87,7 +87,7 @@ struct InfoView: View {
                     .frame(width: 100, height: 80)
                     .offset(x: -60, y: -70)
                     .overlay(
-                        Text("You're healthy!")
+                        Text(result.result.title)
                             .font(Font.custom("Gilroy-Regular", size: 11))
                             .offset(x: -60, y: -80)
                     )

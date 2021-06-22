@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FormView: View {
     
+    @StateObject var vm = ViewModel()
     @Binding var selectedGender: Gender
     @State var age: String = ""
     @State var height: String = ""
@@ -72,11 +73,20 @@ struct FormView: View {
                     
                 }
                 .padding()
+                .onAppear(perform: {
+                    age = ""
+                    height = ""
+                    weight = ""
+                })
                 
                 Spacer()
                 
                 NavigationLink(
-                    destination: ResultView(),
+                    destination: ResultView(result:
+                                                vm.calculateBMI(bmiData:
+                                                                    BMIData(
+                                                                        height: height,
+                                                                        weight: weight))),
                     label: {
                         Text("Calculate BMI")
                             .frame(width: 300, height: 50, alignment: .center)
